@@ -11,7 +11,12 @@ export default function RegisterStep2() {
   const handleRegister = (e: React.FormEvent) => {
     e.preventDefault();
     // Registration logic would go here
-    console.log("Registration complete:", { fullName, telegram, birthdate, city });
+    console.log("Registration complete:", {
+      fullName,
+      telegram,
+      birthdate,
+      city,
+    });
     // Navigate to login or home
     navigate("/login");
   };
@@ -38,7 +43,7 @@ export default function RegisterStep2() {
           <h1 className="text-2xl md:text-3xl lg:text-[31px] font-bold text-white text-center mb-4 leading-[120%] tracking-tight">
             Регистрация в AthleteLink
           </h1>
-          
+
           <p className="text-white text-[13px] text-center mb-8 md:mb-12">
             Осталось всего пару шагов - и ты с нами!
           </p>
