@@ -96,12 +96,30 @@ export default {
             transform: "translateY(-15px) rotate(15deg)",
           },
         },
+        "levitate-active": {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-30px)",
+          },
+        },
+        "levitate-active-slow": {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-25px)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         levitate: "levitate 3s ease-in-out infinite",
         "levitate-slow": "levitate-slow 4s ease-in-out infinite",
+        "levitate-active": "levitate-active 2s ease-in-out infinite",
+        "levitate-active-slow": "levitate-active-slow 2.5s ease-in-out infinite",
       },
     },
   },

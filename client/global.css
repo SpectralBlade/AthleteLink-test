@@ -145,4 +145,30 @@
   .animate-levitate-slow {
     animation: levitate-slow 4s ease-in-out infinite;
   }
+
+  @keyframes levitate-active {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+  }
+
+  @keyframes levitate-active-slow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-25px);
+    }
+  }
+
+  .animate-levitate-active {
+    animation: levitate-active 2s ease-in-out infinite;
+  }
+
+  .animate-levitate-active-slow {
+    animation: levitate-active-slow 2.5s ease-in-out infinite;
+  }
 }

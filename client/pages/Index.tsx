@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Index() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   const scrollToFeatures = () => {
     const element = document.getElementById("features");
@@ -23,7 +25,7 @@ export default function Index() {
             Зарегистрироваться
           </button>
           <button
-            onClick={() => setActiveSection("login")}
+            onClick={() => navigate("/login")}
             className="text-white text-sm md:text-base font-medium hover:opacity-80 transition-opacity capitalize"
           >
             Войти
@@ -67,7 +69,7 @@ export default function Index() {
             Подробнее о проекте
           </button>
           <button
-            onClick={() => setActiveSection("find-event")}
+            onClick={() => navigate("/login")}
             className="px-4 md:px-6 py-3 bg-[#493D02] text-white rounded-xl border border-black text-base md:text-lg font-medium hover:bg-[#5a4a02] transition-colors"
           >
             Найди мероприятие по душе прямо сейчас!
@@ -127,7 +129,7 @@ export default function Index() {
                 Находи новых друзей по интересам в твоем городе!
               </h3>
               <p className="text-base md:text-lg text-white/55 font-medium leading-[145%]">
-                С помощью нашего сервиса ты обязательно найдёшь себе новых друзей и мейтов по хобби или спорту! Объединяйтесь в группы, организовывайте митапы и соревнования, все в ваших руках!
+                С помощью нашего сервиса ты обязательно найдёшь себе новых друзей и мейтов по хобби или спорту! Объединяйтесь в группы, орг��низовывайте митапы и соревнования, все в ваших руках!
               </p>
             </div>
           </div>
@@ -173,10 +175,10 @@ export default function Index() {
             onClick={() => setActiveSection("new-user")}
             className="w-full sm:w-auto min-w-[280px] md:min-w-[325px] h-20 px-6 bg-[#313030] text-white rounded-xl border-[1.5px] border-black shadow-[0_8px_4px_0_rgba(0,0,0,0.5)] text-xl md:text-2xl font-medium hover:bg-[#3f3f3f] transition-colors"
           >
-            Я новенький
+            Я новеньк��й
           </button>
           <button
-            onClick={() => setActiveSection("existing-user")}
+            onClick={() => navigate("/login")}
             className="w-full sm:w-auto min-w-[280px] md:min-w-[325px] h-20 px-6 bg-[#313030] text-white rounded-xl border-[1.5px] border-black shadow-[0_8px_4px_0_rgba(0,0,0,0.5)] text-xl md:text-2xl font-medium hover:bg-[#3f3f3f] transition-colors"
           >
             Я уже смешарик
