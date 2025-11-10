@@ -266,7 +266,7 @@ export default function Profile() {
           </div>
 
           {/* Profile Card */}
-          <div className="rounded-[10px] overflow-hidden mt-54">
+          <div className="rounded-[10px] overflow-hidden mt-34">
             {/* Header Section */}
             <div className="h-[88px] bg-gradient-to-r from-[#878DB3] to-[#4C5AD1]/30 relative">
               <div className="absolute inset-0 flex items-center px-7 mt-32">
