@@ -321,7 +321,7 @@ export default function Profile() {
 
                 {/* Gender */}
                 <div className="relative">
-                  <label className="block text-black/80 text-base mt-30">
+                  <label className="block text-black/80 text-base">
                     Пол
                   </label>
                   <div className="relative">
@@ -330,7 +330,7 @@ export default function Profile() {
                       value={gender}
                       onChange={(e) => setGender(e.target.value)}
                       placeholder="Выберите пол"
-                      className="w-full bg-[#F9F9F9]/50 rounded-lg px-4 py-3 text-black/40 text-base outline-none pr-10"
+                      className="w-full bg-[#F9F9F9]/50 rounded-lg px-4 py-3 text-black/40 text-base outline-none pr-10 mt-4 ml-2"
                     />
                     <button
                       onClick={() => setShowGenderDropdown(!showGenderDropdown)}
