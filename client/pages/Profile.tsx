@@ -36,7 +36,7 @@ export default function Profile() {
           <div className="space-y-8 flex flex-col items-center">
             {/* Dashboard Icon - Active */}
             <div className="relative">
-              <div className="absolute left-0 top-0 w-[76px] h-[50px] bg-gradient-to-r from-[#4182F9]/50 to-[#4182F9]/0 -ml-0"></div>
+              <div className="absolute left-0 top-0 w-[76px] h-[50px] bg-gradient-to-r from-[#4182F9]/50 to-[#4182F9]/0 mt-4 ml-2"></div>
               <svg
                 className="w-[21px] h-[22px] relative z-10"
                 viewBox="0 0 21 22"
