@@ -262,7 +262,7 @@ export default function ProfileStats() {
 
             {/* Progress Bar Section */}
             <div className="relative mb-12">
-              <div className="h-[46px] rounded-[50px] border-3 border-black bg-gradient-to-r from-[#4986F9] via-[#2A387B] to-black shadow-[0_6px_4px_4px_rgba(0,0,0,0.33)] relative overflow-hidden max-w-[1073px]">
+              <div className="h-[46px] rounded-[50px] border-[3px] border-black bg-gradient-to-r from-[#4986F9] via-[#2A387B] to-black shadow-[0_6px_4px_4px_rgba(0,0,0,0.33)] relative overflow-hidden max-w-[1073px]">
                 <div 
                   className="h-full bg-gradient-to-r from-[#4986F9] to-[#2A387B] rounded-[50px]"
                   style={{ width: `${(USER_STATS.currentXP / USER_STATS.maxXP) * 100}%` }}
@@ -345,22 +345,22 @@ export default function ProfileStats() {
               </div>
 
               {/* Middle Card - Recent Games */}
-              <div className="rounded-[55px] border-3 border-black bg-[#4986F9]/40 shadow-[0_14px_4px_0_rgba(0,0,0,0.50)] p-6">
+              <div className="rounded-[55px] border-[3px] border-black bg-[#4986F9]/40 shadow-[0_14px_4px_0_rgba(0,0,0,0.50)] p-6">
                 <h3 className="text-black text-[30px] text-center mb-6">
                   Последние игры ({USER_STATS.recentGames.length})
                 </h3>
 
                 <div className="space-y-4">
                   {USER_STATS.recentGames.map((game) => (
-                    <div key={game.id} className="border-3 border-black rounded-[55px] p-4">
-                      <div className="border-3 border-black rounded-[50px] px-4 py-3 mb-2">
+                    <div key={game.id} className="border-[3px] border-black rounded-[55px] p-4">
+                      <div className="border-[3px] border-black rounded-[50px] px-4 py-3 mb-2">
                         <p className="text-black text-sm">
                           {game.date} - {game.sport}
                           <br />
                           Матч 1х1 против {game.opponent}
                         </p>
                       </div>
-                      <div className="border-3 border-black rounded-[50px] px-4 py-3">
+                      <div className="border-[3px] border-black rounded-[50px] px-4 py-3">
                         <p className="text-white text-sm">
                           {game.result}
                         </p>
@@ -381,7 +381,7 @@ export default function ProfileStats() {
                 </p>
                 
                 <div className="rounded-[55px] border-[1.5px] border-black bg-gradient-to-r from-[#4F0A0A] to-[#780000] p-6">
-                  <div className="rounded-[50px] border-3 border-black p-4 flex items-center gap-4">
+                  <div className="rounded-[50px] border-[3px] border-black p-4 flex items-center gap-4">
                     <img
                       src={`${USER_STATS.rankingProfileImage}?width=116`}
                       alt="Profile"
