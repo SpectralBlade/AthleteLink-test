@@ -330,7 +330,11 @@ export default function Requests() {
                   className="border-[3px] border-black rounded-[50px] p-6 flex items-center justify-between bg-white/5 backdrop-blur-sm"
                   style={{
                     background:
-                      "linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05))",
+                      "linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), url('https://cdn.builder.io/api/v1/image/assets%2F9b4b6868ed8d4ab0841339e996a44e0f%2F29814a62ea5a4dbaab3e007976816fb6?format=webp&width=800')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundAttachment: "fixed",
+                    opacity: 0.95,
                     mixBlendMode: "plus-darker",
                   }}
                 >
