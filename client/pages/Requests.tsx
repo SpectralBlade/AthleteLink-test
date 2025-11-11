@@ -111,27 +111,29 @@ export default function Requests() {
             </button>
 
             {/* Analytics Icon */}
-            <svg
-              className="w-[21px] h-[20px] opacity-50"
-              viewBox="0 0 21 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M16.03 10C18.305 10 19.25 9.16667 18.41 6.43334C17.8413 4.59167 16.1788 3.00834 14.245 2.46667C11.375 1.66667 10.5 2.56667 10.5 4.73334V7.13334C10.5 9.16667 11.375 10 13.125 10H16.03Z"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M17.5002 12.25C16.6865 16.1083 12.8015 18.9083 8.38274 18.225C5.06649 17.7167 2.39774 15.175 1.85524 12.0167C1.14649 7.82501 4.06899 4.12501 8.10274 3.34167"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <button onClick={() => navigate('/stats')}>
+              <svg
+                className="w-[21px] h-[20px] opacity-50 hover:opacity-100 transition-opacity"
+                viewBox="0 0 21 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.03 10C18.305 10 19.25 9.16667 18.41 6.43334C17.8413 4.59167 16.1788 3.00834 14.245 2.46667C11.375 1.66667 10.5 2.56667 10.5 4.73334V7.13334C10.5 9.16667 11.375 10 13.125 10H16.03Z"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M17.5002 12.25C16.6865 16.1083 12.8015 18.9083 8.38274 18.225C5.06649 17.7167 2.39774 15.175 1.85524 12.0167C1.14649 7.82501 4.06899 4.12501 8.10274 3.34167"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
 
             {/* Medal Icon */}
             <svg
@@ -245,7 +247,7 @@ export default function Requests() {
           <div className="flex items-center justify-between mb-12">
             <div>
               <h1 className="text-[#C9D2FF] text-2xl font-medium mb-1">
-                Добрый день, Захар
+                Добрый д��нь, Захар
               </h1>
               <p className="text-white text-base font-light">
                 Сб, 11 октября 2025
