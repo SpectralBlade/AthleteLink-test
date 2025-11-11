@@ -309,7 +309,7 @@ export default function ProfileStats() {
                 {/* Badge Image positioned above the card */}
                 <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
                   <img
-                    src={`${USER_STATS.badgeImage}?width=598`}
+                    src={`${USER_STATS.badgeImage}?width=598 w-1/2 h-auto`}
                     alt="Badge"
                     className="w-[299px] h-[298px] object-contain"
                   />
