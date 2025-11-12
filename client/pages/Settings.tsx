@@ -288,7 +288,7 @@ export default function Settings() {
           </div>
 
           {/* Settings Card */}
-          <div className="rounded-[10px] bg-white/50 p-6 sm:p-8 relative min-h-[748px] max-w-[600px] w-full mx-auto">
+          <<div className="rounded-[10px] bg-white/50 p-6 sm:p-8 relative min-h-[748px] max-w-[600px] w-full mx-auto">
             {/* Password Change Section */}
             <h2 className="text-black text-3xl sm:text-4xl font-bold mb-6 text-center sm:text-left">
               Смена пароля
@@ -319,8 +319,6 @@ export default function Settings() {
                 className="w-full h-[45px] rounded-lg bg-[#F9F9F9]/50 px-4 text-black/40 text-base outline-none placeholder:text-black/40"
               />
             </div>
-          </div>
-
 
             <p className="text-black text-base opacity-80 mb-6 max-w-[526px]">
               Требования: не мене�� 8 символов, не менее 1 заглавной буквы, не
