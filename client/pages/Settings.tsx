@@ -422,6 +422,12 @@ export default function Settings() {
               >
                 Удалить учетную запись
               </button>
+              <button
+                onClick={handleLogout}
+                className="w-[217px] h-[38px] rounded-lg bg-[#B52626] text-white text-base text-center"
+              >
+                Выйти
+              </button>
 
               <p className="text-black text-base opacity-80">
                 App Version: 0.1 Alphadev 13.10.25
