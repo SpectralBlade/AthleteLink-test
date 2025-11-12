@@ -406,7 +406,7 @@ export default function Settings() {
               >
                 Сохранить
               </button>
-
+              </div>
             <div className="flex gap-4 items-center justify-end mb-6">
 
               
