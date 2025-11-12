@@ -406,17 +406,17 @@ export default function Settings() {
               >
                 Сохранить
               </button>
-              </div>
+            </div>
+
             <div className="flex gap-4 items-center justify-end mb-6">
-
-              
-
               <button
                 onClick={handleLogout}
                 className="w-[217px] h-[38px] rounded-lg bg-[#B52626] text-white text-base text-center"
               >
                 Выйти
               </button>
+            <div className="flex gap-4 items-center justify-end mb-6">
+              
               <button
                 onClick={handleDeleteAccount}
                 className="w-[217px] h-[38px] rounded-lg bg-[#B52626] text-white text-base text-center"
