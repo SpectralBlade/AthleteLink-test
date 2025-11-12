@@ -276,24 +276,24 @@ export default function ProfileStats() {
               </div>
               
               {/* Level indicator triangle and badge */}
-              <div
-                className="absolute top-[-30px] left-1/2 -translate-x-1/2 
-             flex flex-col items-center"  {/* Изменено только позиционирование */}
+              <div 
+              className="absolute top-[-30px] left-1/2 -translate-x-1/2 
+                        flex flex-col items-center"  {/* Изменено только позиционирование */}
+            >
+              <svg
+                className="w-[27px] h-[32px] drop-shadow-[0_5px_4px_rgba(0,0,0,0.75)]"
+                viewBox="0 0 32 33"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className="w-[27px] h-[32px] drop-shadow-[0_5px_4px_rgba(0,0,0,0.75)]"
-                  viewBox="0 0 32 33"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* ... */}
-                </svg>
-
-                <div className="bg-[#3462AB] rounded-lg px-3 py-1 text-white text-sm text-center 
-                drop-shadow-[0_5px_4px_rgba(0,0,0,0.75)] mt-1">
-                  {USER_STATS.currentXP}/{USER_STATS.maxXP}
-                </div>
+                {/* ... */}
+              </svg>
+              
+              <div className="bg-[#3462AB] rounded-lg px-3 py-1 text-white text-sm text-center 
+                            drop-shadow-[0_5px_4px_rgba(0,0,0,0.75)] mt-1">
+                {USER_STATS.currentXP}/{USER_STATS.maxXP}
               </div>
+            </div>
               
               {/* Level number */}
               <div className="absolute top-[-40px] right-[150px] text-white text-[50px] font-bold stroke-black stroke-[4px]" style={{ WebkitTextStroke: '4px black' }}>
