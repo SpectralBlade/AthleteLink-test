@@ -351,9 +351,13 @@ export default function FindRequests() {
                 >
                   {/* Left Side - Event Info */}
                   <div className="flex-1">
-                    <h3 className="text-white text-[20px] font-light mb-1">
-                      {request.title}
-                    </h3>
+                    <button
+                      onClick={() => navigate("/find-requests")}
+                    >
+                      <h3 className="text-white text-[20px] font-light mb-1">
+                        {request.title}
+                      </h3>
+                    </button>
                     <p className="text-white text-[15px] font-light">
                       {request.description}
                     </p>
