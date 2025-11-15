@@ -121,7 +121,8 @@
 
 @layer utilities {
   @keyframes levitate {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0) rotate(15deg);
     }
     50% {
@@ -130,7 +131,8 @@
   }
 
   @keyframes levitate-slow {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0) rotate(15deg);
     }
     50% {
@@ -147,7 +149,8 @@
   }
 
   @keyframes levitate-active {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0);
     }
     50% {
@@ -156,7 +159,8 @@
   }
 
   @keyframes levitate-active-slow {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0);
     }
     50% {
