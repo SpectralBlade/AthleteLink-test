@@ -1,8 +1,96 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { USER_STATS } from "@/constants/statsConstants";
 
-export default function ProfileStats() {
+interface RequestItem {
+  id: number;
+  title: string;
+  description: string;
+  venue: string;
+  dateTime: string;
+  players: string;
+  avgRating: string;
+  sport: string;
+}
+
+export default function FindRequests() {
   const navigate = useNavigate();
+  const [sportFilter, setSportFilter] = useState("Литрбол");
+  const [dateFilter, setDateFilter] = useState("По дате");
+  const [showSportDropdown, setShowSportDropdown] = useState(false);
+  const [showDateDropdown, setShowDateDropdown] = useState(false);
+
+  const requests: RequestItem[] = [
+    {
+      id: 1,
+      title: "Bootcamp with Absolute Vodka",
+      description: "Вы будете играть в Литрбол!",
+      venue: "Московсикий авиационный...",
+      dateTime: "18.10.2025, 23:33",
+      players: "Игроков: 256/256",
+      avgRating: "Ср. рейтинг: ~50000",
+      sport: "Литрбол",
+    },
+    {
+      id: 2,
+      title: "Bootcamp with Absolute Vodka",
+      description: "Вы будете играть в Литрбол!",
+      venue: "Московсикий авиационный...",
+      dateTime: "18.10.2025, 23:33",
+      players: "Игроков: 256/256",
+      avgRating: "Ср. рейтинг: ~50000",
+      sport: "Литрбол",
+    },
+    {
+      id: 3,
+      title: "Bootcamp with Absolute Vodka",
+      description: "Вы будете играть в Литрбол!",
+      venue: "Московсикий авиационный...",
+      dateTime: "18.10.2025, 23:33",
+      players: "Игроков: 256/256",
+      avgRating: "Ср. рейтинг: ~50000",
+      sport: "Литрбол",
+    },
+    {
+      id: 4,
+      title: "Bootcamp with Absolute Vodka",
+      description: "Вы будете играть в Литрбол!",
+      venue: "Московсикий авиационный...",
+      dateTime: "18.10.2025, 23:33",
+      players: "Игроков: 256/256",
+      avgRating: "Ср. рейтинг: ~50000",
+      sport: "Литрбол",
+    },
+    {
+      id: 5,
+      title: "Bootcamp with Absolute Vodka",
+      description: "Вы будете играть в Литрбол!",
+      venue: "Московсикий авиационный...",
+      dateTime: "18.10.2025, 23:33",
+      players: "Игроков: 256/256",
+      avgRating: "Ср. рейтинг: ~50000",
+      sport: "Литрбол",
+    },
+    {
+      id: 6,
+      title: "Bootcamp with Absolute Vodka",
+      description: "Вы будете играть в Литрбол!",
+      venue: "Московсикий авиационный...",
+      dateTime: "18.10.2025, 23:33",
+      players: "Игроков: 256/256",
+      avgRating: "Ср. рейтинг: ~50000",
+      sport: "Литрбол",
+    },
+    {
+      id: 7,
+      title: "Bootcamp with Absolute Vodka",
+      description: "Вы будете играть в Литрбол!",
+      venue: "Московсикий авиационный...",
+      dateTime: "18.10.2025, 23:33",
+      players: "Игроков: 256/256",
+      avgRating: "Ср. рейтинг: ~50000",
+      sport: "Литрбол",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-[#493D02] overflow-y-auto">
@@ -38,11 +126,10 @@ export default function ProfileStats() {
               </svg>
             </button>
 
-            {/* Analytics Icon - Active */}
-            <div className="relative">
-              <div className="absolute left-0 top-0 w-[76px] h-[50px] bg-gradient-to-r from-[#4182F9]/50 to-[#4182F9]/0 -ml-10 mt-[-0.99rem]"></div>
+            {/* Analytics Icon */}
+            <button onClick={() => navigate("/stats")}>
               <svg
-                className="w-[21px] h-[20px] relative z-10"
+                className="w-[21px] h-[20px] opacity-50 hover:opacity-100 transition-opacity"
                 viewBox="0 0 21 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +149,7 @@ export default function ProfileStats() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </div>
+            </button>
 
             {/* Medal Icon */}
             <svg
@@ -177,10 +264,10 @@ export default function ProfileStats() {
           <div className="flex items-center justify-between mb-12">
             <div>
               <h1 className="text-[#C9D2FF] text-2xl font-medium mb-1">
-                Добрый день, {USER_STATS.userName}
+                Добрый день, Захар
               </h1>
               <p className="text-white text-base font-light">
-                {USER_STATS.currentDate}
+                Сб, 11 октября 2025
               </p>
             </div>
 
@@ -244,217 +331,166 @@ export default function ProfileStats() {
 
               {/* Profile Picture */}
               <img
-                src={`${USER_STATS.profileImage}?width=94`}
+                src="https://api.builder.io/api/v1/image/assets/TEMP/57b1825b265d4113d32bb4e7a341952f19bb981b?width=94"
                 alt="Profile"
-                className="w-[47px] h-[44px] rounded-[10px] object-cover"
+                className="w-[47px] h-[44px] rounded-[10px]"
               />
             </div>
           </div>
 
           {/* Main Content Area */}
-          <div className="rounded-[10px] bg-white/50 p-8 relative min-h-[850px]">
-            {/* Title */}
-            <h2 className="text-black text-[46px] font-medium mb-4">
-              Спортивный престиж
-            </h2>
+          <div className="rounded-[10px] bg-[#797777]/50 p-8 min-h-[918px]">
+            {/* Title and Filters */}
+            <div className="flex items-center justify-between mb-8">
+              <h1 className="text-white text-[50px] font-light">Заявки</h1>
 
-            {/* Description */}
-            <p className="text-black/80 text-base mb-6 max-w-[710px]">
-              Зарабатывайте опыт в товарищеских/рейтинговых встречах, чтобы
-              повышать уровень!
-              <br />
-              До следующего уровня престижа: {USER_STATS.nextLevelXP} очков
-              опыта
-            </p>
-
-            {/* Progress Bar Section */}
-            <div className="relative mb-12">
-              <div
-                className="h-[46px] rounded-[50px] border-[3px] border-black 
-             bg-gradient-to-r from-[#4986F9] via-[#2A387B] to-black 
-             shadow-[0_6px_4px_4px_rgba(0,0,0,0.33)] relative overflow-hidden 
-             max-w-[90%] mx-auto" // <-- Адаптивность через max-w-[90%] и mx-auto
-              >
-                <div
-                  className="h-full bg-gradient-to-r from-[#4986F9] to-[#2A387B] 
-               rounded-[5000px]"
-                  style={{
-                    width: `${(USER_STATS.currentXP / USER_STATS.maxXP) * 100}%`,
-                  }}
-                ></div>
-              </div>
-
-              {/* Level indicator triangle and badge */}
-              <div
-                className="absolute top-[calc(46pxpx)] left-1/2 -translate-x-1/2 
-             flex flex-col items-center"
-              >
-                <svg
-                  className="w-[27px] h-[32px] drop-shadow-[0_5px_4px_rgba(0,0,0,0.75)]"
-                  viewBox="0 0 32 33"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M15.6914 0L27.3827 24H4.00006L15.6914 0Z"
-                    fill="url(#paint0_linear)"
-                    stroke="black"
-                    strokeWidth="1.5"
-                  />
-                  <defs>
-                    <linearGradient
-                      id="paint0_linear"
-                      x1="15.6914"
-                      y1="0"
-                      x2="15.6914"
-                      y2="32"
-                      gradientUnits="userSpaceOnUse"
+              <div className="flex gap-4">
+                {/* Sport Filter */}
+                <div className="relative">
+                  <button
+                    onClick={() => setShowSportDropdown(!showSportDropdown)}
+                    className="w-[380px] h-[76px] rounded-[20px] border-[2.6px] border-black bg-[#D9D9D9]/40 flex items-center justify-center px-6 relative"
+                  >
+                    <svg
+                      className="absolute left-6"
+                      width="29"
+                      height="2"
+                      viewBox="0 0 29 2"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      <stop stopColor="#D3D3D3" />
-                      <stop offset="1" stopColor="#EBEBEB" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-
-                <div className="bg-[#3462AB] rounded-lg px-3 py-1 text-white text-sm text-center drop-shadow-[0_5px_4px_rgba(0,0,0,0.75)] mt-1">
-                  {USER_STATS.currentXP}/{USER_STATS.maxXP}
+                      <line
+                        y1="1"
+                        x2="29"
+                        y2="1"
+                        stroke="#9D9D9D"
+                        strokeWidth="2"
+                      />
+                    </svg>
+                    <svg
+                      className="absolute left-[62px]"
+                      width="29"
+                      height="2"
+                      viewBox="0 0 29 2"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="1"
+                        x2="29"
+                        y2="1"
+                        stroke="#9D9D9D"
+                        strokeWidth="2"
+                      />
+                    </svg>
+                    <span className="text-white text-[32px] font-light">
+                      {sportFilter}
+                    </span>
+                  </button>
                 </div>
-              </div>
 
-              {/* Level number */}
-              <div
-                className="absolute top-[-19px] right-[170px] text-white text-[50px] font-bold stroke-black stroke-[4px]"
-                style={{ WebkitTextStroke: "4px black" }}
-              >
-                {USER_STATS.currentLevel}
+                {/* Date Filter */}
+                <div className="relative">
+                  <button
+                    onClick={() => setShowDateDropdown(!showDateDropdown)}
+                    className="w-[380px] h-[76px] rounded-[20px] border-[2.6px] border-black bg-[#D9D9D9]/40 flex items-center justify-center px-6 relative"
+                  >
+                    <svg
+                      className="absolute left-6"
+                      width="29"
+                      height="2"
+                      viewBox="0 0 29 2"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="1"
+                        x2="29"
+                        y2="1"
+                        stroke="#9D9D9D"
+                        strokeWidth="2"
+                      />
+                    </svg>
+                    <svg
+                      className="absolute left-[62px]"
+                      width="29"
+                      height="2"
+                      viewBox="0 0 29 2"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="1"
+                        x2="29"
+                        y2="1"
+                        stroke="#9D9D9D"
+                        strokeWidth="2"
+                      />
+                    </svg>
+                    <span className="text-white text-[32px] font-light">
+                      {dateFilter}
+                    </span>
+                  </button>
+                </div>
               </div>
             </div>
 
-            {/* Three Column Layout */}
-            <div className="grid grid-cols-3 gap-6 mt-20">
-              {/* Left Card - Best Sport */}
-              <div className="rounded-[55px] border-[1.5px] border-black bg-gradient-to-r from-[#4F0A0A] to-[#780000] shadow-[0_14px_4px_0_rgba(0,0,0,0.50)] p-6 flex flex-col items-center relative overflow-visible ">
-                {/* Badge Image positioned above the card */}
-                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 rotate-10 transform-origin-center scale-125">
-                  <img
-                    src={`${USER_STATS.badgeImage}?width=598 `}
-                    alt="Badge"
-                    className="w-[299px] h-[298px] object-contain"
-                  />
-                </div>
-
-                {/* Roman Numeral */}
+            {/* Requests List */}
+            <div className="space-y-0">
+              {requests.map((request) => (
                 <div
-                  className="text-[#760000] text-[100px] font-bold text-center mt-48"
-                  style={{
-                    WebkitTextStroke: "3px black",
-                    textShadow: "0 10px 4px rgba(0, 0, 0, 0.50)",
-                    fontFamily: "Piazzolla, serif",
-                  }}
+                  key={request.id}
+                  className="border-[0.5px] border-white rounded-[30px] px-6 py-4 flex items-center justify-between"
                 >
-                  {USER_STATS.rankRomanNumeral}
-                </div>
+                  {/* Left Side - Event Info */}
+                  <div className="flex-1">
+                    <h3 className="text-white text-[20px] font-light mb-1">
+                      {request.title}
+                    </h3>
+                    <p className="text-white text-[15px] font-light">
+                      {request.description}
+                    </p>
+                  </div>
 
-                <h3 className="text-[#D9D9D9] text-[32px] font-light text-center mt-8">
-                  Ваш лучший спорт: {USER_STATS.bestSport}
-                </h3>
-
-                <p className="text-[#D9D9D9] text-xl text-center mt-4">
-                  Ранг: {USER_STATS.sportRank} ({USER_STATS.sportRankProgress})
-                  <br />
-                  Глобальный рейтинг: {USER_STATS.globalRanking}
-                </p>
-
-                <p className="text-[#D9D9D9] text-xl text-center mt-4">
-                  Всего побед: {USER_STATS.totalWins}
-                  <br />
-                  Win Rate: {USER_STATS.winRate}
-                </p>
-              </div>
-
-              {/* Middle Card - Recent Games */}
-              <div className="rounded-[55px] border-[3px] border-black bg-[#4986F9]/40 shadow-[0_14px_4px_0_rgba(0,0,0,0.50)] p-6">
-                <h3 className="text-black text-[30px] text-center mb-6">
-                  Последние игры ({USER_STATS.recentGames.length})
-                </h3>
-
-                <div className="space-y-4">
-                  {USER_STATS.recentGames.map((game) => (
-                    <div
-                      key={game.id}
-                      className="border-[3px] border-black rounded-[55px] p-4"
-                    >
-                      <div className="border-[3px] border-black rounded-[50px] px-4 py-3 mb-2">
-                        <p className="text-black text-sm">
-                          {game.date} - {game.sport}
-                          <br />
-                          Матч 1х1 против {game.opponent}
-                        </p>
-                      </div>
-                      <div className="border-[3px] border-black rounded-[50px] px-4 py-3">
-                        <p className="text-white text-sm">{game.result}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <button className="w-full mt-6 bg-[#4182F9] text-white text-sm rounded-lg px-6 py-2 drop-shadow-[0_8px_4px_rgba(0,0,0,0.50)]">
-                  Как мой профиль видят другие люди?
-                </button>
-              </div>
-
-              {/* Right Card - Current Ranking */}
-              <div className="flex flex-col gap-6">
-                <p className="text-black text-2xl font-medium opacity-80">
-                  Сейчас в рейтинге Вы выглядите так:
-                </p>
-
-                <div className="rounded-[55px] border-[1.5px] border-black bg-gradient-to-r from-[#4F0A0A] to-[#780000] p-6">
-                  <div className="rounded-[50px] border-[3px] border-black p-4 flex items-center gap-4">
-                    <img
-                      src={`${USER_STATS.rankingProfileImage}?width=116`}
-                      alt="Profile"
-                      className="w-[58px] h-[58px] rounded-full object-cover"
-                    />
-
-                    <div className="flex-1">
-                      <h4
-                        className="text-white text-base font-bold"
-                        style={{ WebkitTextStroke: "1px black" }}
-                      >
-                        {USER_STATS.rankingName}
-                      </h4>
-                      <p
-                        className="text-xs font-bold bg-gradient-to-b from-[#A2E1B1] via-[#AE349C] to-white bg-clip-text text-transparent"
-                        style={{ WebkitTextStroke: "1px black" }}
-                      >
-                        {USER_STATS.rankingTitle}
-                        <br />
-                        <span className="text-white">
-                          Уровень опыта: {USER_STATS.rankingLevel} (
-                          {USER_STATS.rankingXP})
-                        </span>
-                      </p>
+                  {/* Right Side - Details */}
+                  <div className="flex items-center gap-3">
+                    {/* Venue */}
+                    <div className="border border-white rounded-[50px] px-4 py-1.5 min-w-[226px] text-center">
+                      <span className="text-white text-[15px] font-light text-right">
+                        {request.venue}
+                      </span>
                     </div>
 
-                    <div
-                      className="text-white text-2xl font-bold"
-                      style={{ WebkitTextStroke: "1px black" }}
-                    >
-                      {USER_STATS.rankingPosition}
+                    {/* Date/Time */}
+                    <div className="border border-white rounded-[50px] px-4 py-1.5 min-w-[165px] text-center">
+                      <span className="text-white text-base font-light text-right">
+                        {request.dateTime}
+                      </span>
+                    </div>
+
+                    {/* Players */}
+                    <div className="border border-white rounded-[50px] px-4 py-1.5 min-w-[165px] text-center">
+                      <span className="text-white text-[15px] font-light text-right">
+                        {request.players}
+                      </span>
+                    </div>
+
+                    {/* Average Rating */}
+                    <div className="border border-white rounded-[50px] px-4 py-1.5 min-w-[167px] text-center">
+                      <span className="text-white text-[15px] font-light text-right">
+                        {request.avgRating}
+                      </span>
+                    </div>
+
+                    {/* Sport Type */}
+                    <div className="border border-white rounded-[50px] px-4 py-1.5 min-w-[106px] text-center">
+                      <span className="text-white text-[15px] font-light">
+                        {request.sport}
+                      </span>
                     </div>
                   </div>
                 </div>
-
-                {/* Cat Image */}
-                <div className="flex justify-center">
-                  <img
-                    src={`${USER_STATS.catImage}?width=720`}
-                    alt="Cat"
-                    className="w-[360px] h-[360px] object-contain"
-                  />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

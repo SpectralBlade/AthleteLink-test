@@ -13,6 +13,7 @@ import Profile from "./pages/Profile";
 import ProfileStats from "./pages/ProfileStats";
 import Requests from "./pages/Requests";
 import Settings from "./pages/Settings";
+import FindRequests from "./pages/FindRequests";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/stats" element={<ProfileStats />} />
           <Route path="/requests" element={<Requests />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/find-requests" element={<FindRequests />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

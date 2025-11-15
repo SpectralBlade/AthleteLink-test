@@ -249,16 +249,19 @@ export default function Requests() {
           <div className="flex items-center justify-between mb-12">
             <div>
               <h1 className="text-[#C9D2FF] text-2xl font-medium mb-1">
-                Добрый д��нь, Захар
+                Добрый день, Захар
               </h1>
               <p className="text-white text-base font-light">
-                Сб, 11 октяб��я 2025
+                Сб, 11 октября 2025
               </p>
             </div>
 
             <div className="flex items-center gap-4">
               {/* Search */}
-              <div className="w-[46px] h-[47px] rounded-[10px] bg-white/50 flex items-center justify-center">
+              <button
+                onClick={() => navigate("/find-requests")}
+                className="w-[46px] h-[47px] rounded-[10px] bg-white/50 flex items-center justify-center hover:bg-white/70 transition-colors"
+              >
                 <svg
                   className="w-[22px] h-[22px]"
                   viewBox="0 0 22 22"
@@ -271,7 +274,7 @@ export default function Requests() {
                     fillOpacity="0.6"
                   />
                 </svg>
-              </div>
+              </button>
 
               {/* Stats */}
               <div className="w-[46px] h-[47px] rounded-[10px] bg-white/50 flex items-center justify-center relative">

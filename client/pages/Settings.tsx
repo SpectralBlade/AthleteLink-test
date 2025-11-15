@@ -225,7 +225,10 @@ export default function Settings() {
 
             <div className="flex items-center gap-4">
               {/* Search */}
-              <div className="w-[46px] h-[47px] rounded-[10px] bg-white/50 flex items-center justify-center">
+              <button
+                onClick={() => navigate("/find-requests")}
+                className="w-[46px] h-[47px] rounded-[10px] bg-white/50 flex items-center justify-center hover:bg-white/70 transition-colors"
+              >
                 <svg
                   className="w-[22px] h-[22px]"
                   viewBox="0 0 22 22"
@@ -238,7 +241,7 @@ export default function Settings() {
                     fillOpacity="0.6"
                   />
                 </svg>
-              </div>
+              </button>
 
               {/* Stats */}
               <div className="w-[46px] h-[47px] rounded-[10px] bg-white/50 flex items-center justify-center relative">
@@ -319,7 +322,7 @@ export default function Settings() {
             </div>
 
             <p className="text-black text-base opacity-80 mb-6 max-w-[526px]">
-              Требования: не мене�� 8 символов, не менее 1 заглавной буквы, не
+              Требования: не менее 8 символов, не менее 1 заглавной буквы, не
               менее 1 строчной буквы, не менее 1 цифры
             </p>
 
