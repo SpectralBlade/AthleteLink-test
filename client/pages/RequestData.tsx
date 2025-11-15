@@ -174,9 +174,12 @@ export default function RequestData() {
 
               <div className="w-[412px] flex flex-col">
                 <div className="rounded-[25px] shadow-[0_8px_4px_0_rgba(0,0,0,0.50)] overflow-hidden mb-6 aspect-[289/414]">
-                  <img
+                  <video
                     src={requestData.stickerImage}
-                    alt="Sticker"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     className="w-full h-full object-cover"
                   />
                 </div>
